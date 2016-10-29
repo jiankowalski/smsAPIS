@@ -1,0 +1,20 @@
+<form action="/situacaoMensagem/create" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Create a situacaoMensagem</h2>
+
+<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="data" name="data">
+	</div>
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/situacaoMensagem">Back to list</a>
+</form>

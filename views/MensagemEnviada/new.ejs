@@ -1,0 +1,35 @@
+<form action="/crudmensagemEnviada/create" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Nova Mensagem</h2>
+
+<% var flash = null; if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="mensagem" name="mensagem">
+	</div>
+
+
+	<div class="control-group" style = "width: 300px;">
+		<label> </lable>
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+    <select class="form-control" name="pessoa">
+    <% _.each(pessoas, function(p) {%>
+       <option value="<%=p.id%>">
+       <%=p.id%> <%=p.nome%>
+       </option>
+    <% }) %>
+	</select>
+	</div> 
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/crudmensagemEnviada">Lista de mensagem</a>
+</form>

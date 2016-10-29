@@ -1,0 +1,14 @@
+<form class="show">
+	<div class="form-group">
+		<h2> a mensagemEnviada... </h2>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= mensagemEnviada.mensagem %>" name="mensagem" type="text" class="form-control" disabled/>
+	</div>
+
+</div>
+</div>
+<a href="/mensagemEnviada/edit/<%=mensagemEnviada.id %>" class="btn btn-default">Edit</a> |
+<a href="/mensagemEnviada">Back to list</a>
+</form>

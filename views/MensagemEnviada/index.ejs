@@ -1,0 +1,29 @@
+<div class="container">
+	<h3>MensagemEnviada Listing</h3>
+	<table class='table table-hover table-condensed'>
+	<tr>
+
+	<th> mensagem </th>
+
+	<th></th>
+	<th></th>
+	<th></th>
+</tr>
+	<% _.forEach(mensagemEnviadas, function(mensagemEnviada) { %>
+    		<tr data-id="<%=mensagemEnviada.id %>" data-model="mensagemEnviada">
+		
+			<td><%= mensagemEnviada.mensagem%></td>
+		
+			<td><a href="/mensagemEnviada/show/<%=mensagemEnviada.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
+			<td><a href="/mensagemEnviada/edit/<%=mensagemEnviada.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
+
+			<td><form action="/mensagemEnviada/destroy/<%=mensagemEnviada.id %>" method="POST">
+				<input type="hidden" name="_method" value="delete"/>
+				<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
+			</form></td>
+		</tr>
+<% }) %>
+	</table>
+	<a href="/crudmensagemEnviada/new/" class="btn btn-success btn-sm" role="button">New MensagemEnviada</a> |
+	<a href="/">all scaffolds</a>
+</div>

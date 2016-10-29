@@ -1,0 +1,32 @@
+<form action="/pessoa/create" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Create a pessoa</h2>
+
+<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="nome" name="nome">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="numero" name="numero">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="email" name="email">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="facebook" name="facebook">
+	</div>
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/pessoa">Back to list</a>
+</form>

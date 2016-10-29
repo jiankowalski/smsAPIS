@@ -1,0 +1,29 @@
+<form class="show">
+	<div class="form-group">
+		<h2> a pessoa... </h2>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pessoa.nome %>" name="nome" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pessoa.numero %>" name="numero" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pessoa.email %>" name="email" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= pessoa.facebook %>" name="facebook" type="text" class="form-control" disabled/>
+	</div>
+
+</div>
+</div>
+<a href="/pessoa/edit/<%=pessoa.id %>" class="btn btn-default">Edit</a> |
+<a href="/pessoa">Back to list</a>
+</form>

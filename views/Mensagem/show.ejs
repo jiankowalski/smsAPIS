@@ -1,0 +1,14 @@
+<form class="show">
+	<div class="form-group">
+		<h2> a mensagem... </h2>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= mensagem.mensagem %>" name="mensagem" type="text" class="form-control" disabled/>
+	</div>
+
+</div>
+</div>
+<a href="/mensagem/edit/<%=mensagem.id %>" class="btn btn-default">Edit</a> |
+<a href="/mensagem">Back to list</a>
+</form>
